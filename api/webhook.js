@@ -4,13 +4,13 @@ const axios = require('axios');
 
 app.use(express.json());
 
-app.post('/api/webhook', (req, res) => {
+app.post('/', (req, res) => {
   // Lógica para manipular a requisição
   console.log(req.body); // Exibe os dados recebidos
   res.status(200).send('Requisição recebida');
 });
 
-app.get('/api/webhook', (req, res) => {
+app.get('/', (req, res) => {
   // Sua lógica para a requisição GET
   console.log(req.body);
   res.send('Resposta para GET');
